@@ -204,7 +204,7 @@ class Crawler {
                 );
 
                 // incrementally log crawl progress
-                if ( $crawled % 300 === 0 ) {
+                if ( $crawled % $progress_report_interval === 0 ) {
                     $notice = "Crawling progress: $crawled crawled, $cache_hits skipped (cached).";
                     WsLog::l( $notice );
                 }
